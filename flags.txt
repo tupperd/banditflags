@@ -1,0 +1,25 @@
+bandit.labs.overthewire.org
+PORT: 2220
+
+CONNECTION COMMAND:
+ssh -l <username> -p 2220 bandit.labs.overthewire.org
+
+bandit13: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
+
+bandit14: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+--ssh from bandit13 into bandit14 using sshkey.private as authentication
+
+bandit15: BfMYroe26WYalil77FoDi9qh59eK5xNr
+--"nc localhost 30000" then enter 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
+
+bandit16: cluFn7wTiGryunymYOu4RcffSxQluehd
+--"openssl s_client -connect localhost:30001" then enter BfMYroe26WYalil77FoDi9qh59eK5xNr
+ 
+bandit17: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
+--"nmap -p 31000-32000" to find open ports
+--"openssl s_client -connect localhost:31790"
+--copy RSA key into tmp directory
+--"ssh -i <rsakey> bandit17@localhost
+
+bandit18: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+--diff passwords.old passwords.new

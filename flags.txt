@@ -1,5 +1,4 @@
 bandit.labs.overthewire.org
-PORT: 2220
 
 CONNECTION COMMAND:
 ssh -l <username> -p 2220 bandit.labs.overthewire.org
@@ -19,7 +18,16 @@ bandit17: xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn
 --"nmap -p 31000-32000" to find open ports
 --"openssl s_client -connect localhost:31790"
 --copy RSA key into tmp directory
---"ssh -i <rsakey> bandit17@localhost
+--"ssh -i <rsakey> bandit17@localhost"
 
 bandit18: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
---diff passwords.old passwords.new
+--"diff passwords.old passwords.new"
+
+bandit19: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+--execute "cd ~" to enter the home directory
+--"ssh -T bandit18@bandit.labs.overthewire.org" opens a text terminal (tty)
+instead of a pseudo-terminal (pty). NOTE: ssh uses pty terminals by default
+and the .bashrc blocks the pty, but not the tty.
+--"cat readme"
+
+bandit20
